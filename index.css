@@ -1,0 +1,17 @@
+body {
+    background-color: red;
+    color: white;
+}
+
+img {
+    height: auto;
+    width: 400px;
+}
+
+#header {
+    text-align: center;
+}
+
+.does {
+    text-align: center;
+}
