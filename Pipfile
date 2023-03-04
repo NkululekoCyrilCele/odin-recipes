@@ -5,8 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
+mysqlclient = "*"
+pylint-django = "*"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
 python_version = "3.10"
