@@ -1,7 +1,5 @@
-This is Nkululeko's second Git project.
+I am currently working on my second Git project, where the main purpose is to apply my HTML knowledge by building a recipe website. The main index page of my website will contain links to a few recipes.
 
-The purpose of the project is to take all the HTML knowledge I've garnered so far and put it into practice.
-The recipe website that I am bulding in this project has a main index page with links to a few recipes.
+Once I complete this project, I will have created a homepage, an about page, and a recipe page for my website. To make it easier for users to navigate between pages, I will include a navigation link on each page so that they don't have to click on the "back" arrow.
 
-Once the project is complete, I will have created a homepage to my website, and the about and the recipe pages.
-Also, each page will have a link to easily navigate to another page without having to click on the 'back' arrow.
+Aside from working on the website's front-end, I have decided to use my newly acquired Django skills to develop the back-end of the project.
