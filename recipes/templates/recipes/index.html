@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>The Odin Project</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="index.css">
-    </head>
+{% extends 'recipes/base.html' %}
 
-    <body>
-        <h1 id="header">Odin Recipes</h1>
-
-        <p>
-            <img src="image3.jpg" alt="The Odin Project">
-        </p>
-        <ul>
-            <li><a href="recipes/apple_cake.html">Apple Cake Recipe</a></li>
-            <li><a href="recipes/carrot_cake.html">Carrot Cake Recipe</a></li>
-            <li><a href="recipes/pumpkin_cake.html">Pumpkin Cake Recipe</a></li>
-        </ul>
-
-        <a href="about.html">About</a>
-        <p><a href="#header">Return to top</a></p>
-    </body>
-</html>
+{% block content %}
+<div class="image-container">
+    {% if home_page.image %}
+    <img src="{{ home_page.image.url }}" alt="{{ home_page.header }}" class="image">
+    {% endif %}
+    {% if home_page.image2 %}
+    <img src="{{ home_page.image2.url }}" alt="{{ home_page.header }}" class="image">
+    {% endif %}
+    {% if home_page.image3 %}
+    <img src="{{ home_page.image3.url }}" alt="{{ home_page.header }}" class="image">
+    {% endif %}
+</div>
+<h1>{{ home_page.header }}</h1>
+<ul>
+    {% for recipe in recipes %}
+    <li><a href="{{ recipe.url }}">{{ recipe.name }}</a></li>
+    {% endfor %}
+</ul>
+<p><a href="#header">Return to top</a></p>
+{% endblock %}
