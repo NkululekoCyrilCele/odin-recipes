@@ -1,110 +1,13 @@
 {% extends 'recipes/base.html' %}
 
-{% block extra_css %}
-<style>
-    .image-container {
-        margin: 20px auto;
-        max-width: 700px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+{% load static %}
 
-    .image-container img {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
-
-    h1 {
-        font-size: 36px;
-        text-align: center;
-        margin: 50px 0;
-    }
-
-    ul {
-        list-style: none;
-        margin: 50px 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    li {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    li:hover {
-        background-color: #f9f9f900;
-    }
-
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    p {
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .top-link {
-        display: block;
-        text-align: center;
-        margin: 50px 0;
-        font-size: 20px;
-        color: #333;
-        text-decoration: none;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    /* Add hover effect */
-    .top-link:hover {
-        background-color: #f9f9f9;
-    }
-
-    /* Adjust position on smaller screens */
-    @media screen and (max-width: 600px) {
-        .top-link {
-            margin: 20px 0;
-        }
-    }
-</style>
-{% endblock %}
 {% block content %}
-<div class="image-container">
-    {% if home_page.image %}
-    <img src="{{ home_page.image.url }}" alt="{{ home_page.header }}" class="image">
-    {% endif %}
-    {% if home_page.image2 %}
-    <img src="{{ home_page.image2.url }}" alt="{{ home_page.header }}" class="image">
-    {% endif %}
-    {% if home_page.image3 %}
-    <img src="{{ home_page.image3.url }}" alt="{{ home_page.header }}" class="image">
-    {% endif %}
-</div>
-<h1>{{ home_page.header }}</h1>
-<ul>
-    {% for recipe in recipes %}
-    <li><a href="{{ recipe.url }}">{{ recipe.name }}</a></li>
-    {% endfor %}
-</ul>
-<p><a href="{% url 'home' %}" class="top-link" onclick="scrollToTop()">Return to top</a></p>
-<script>
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
+<h1 id="header">Odin Recipes</h1>
+
+<p>Welcome to the Odin Project recipe site!</p>
+
+<p>
+    <img src="{% static 'img/image3.jpg' %}" alt="The Odin Project">
+</p>
 {% endblock %}
