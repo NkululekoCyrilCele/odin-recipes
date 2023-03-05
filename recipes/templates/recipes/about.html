@@ -1,61 +1,32 @@
 {% extends 'recipes/base.html' %}
 
+{% load static %}
+
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+<h1 id="header">About</h1>
 
-{% block extra_css %}
-<style>
-    h1 {
-        font-size: 36px;
-        text-align: center;
-        margin: 50px 0;
-    }
+<p>
+    Welcome to our website!
+</p>
+<p>
+    We are a team of passionate foodies who love to cook and bake, and we want to share our knowledge and experience
+    with you. Our website is dedicated to providing you with delicious and easy-to-follow recipes for a variety of
+    dishes, with a particular focus on cakes.
 
-    ul {
-        list-style: none;
-        margin: 50px 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    Our mission is to inspire you to get creative in the kitchen and try new recipes that you may not have thought of
+    before. We believe that cooking and baking should be fun and enjoyable, and we want to help you create memorable
+    moments with your family and friends through the joy of food.
 
-    li {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    Whether you are a seasoned cook or a beginner, our recipes are designed to be accessible and easy to follow. We
+    provide step-by-step instructions and include helpful tips and tricks to ensure that your dishes turn out perfectly
+    every time.
 
-    li:hover {
-        background-color: #f9f9f900;
-    }
+    On our website, you will find a wide range of cake recipes, from classic favorites like chocolate cake and carrot
+    cake to more unique creations like pumpkin caramel bourbon poke cake and apple butter spice cake. We also offer
+    recipes for cakes that cater to different dietary needs, such as gluten-free and vegan cakes.
 
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    p {
-        text-align: center;
-        margin-top: 50px;
-    }
-</style>
-{% endblock %}
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <title>About</title>
-    </head>
-
-    <body>
-        <h1>About Us</h1>
-        <p>{{ about_page.content }}</p>
-    </body>
-
-</html>
+    We hope that you enjoy our website and find inspiration for your next baking adventure. If you have any questions or
+    suggestions, please do not hesitate to contact us. Happy cooking!
+</p>
 {% endblock %}

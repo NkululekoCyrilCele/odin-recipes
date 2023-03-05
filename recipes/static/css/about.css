@@ -1,0 +1,33 @@
+/* Set font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the header */
+#header {
+  color: #008080;
+  font-size: 36px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Style the links */
+a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style the paragraphs */
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-left: 70px;
+  margin-right: 70px;
+}

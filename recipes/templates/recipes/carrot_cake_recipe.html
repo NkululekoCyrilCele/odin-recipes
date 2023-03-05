@@ -1,0 +1,63 @@
+{% extends 'recipes/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/carrot_cake.css' %}">
+<h1 id="header">Carrot Cake Recipe</h1>
+
+<p>
+    <img src="{% static 'img/image1.jpg' %}" alt="The Odin Project" height="300" width="auto">
+</p>
+<div class="center">
+    <h3>Carrot Cake</h3>
+
+    <p>This moist and rich cake is centered around the use of grated carrots as its primary ingredient.</p>
+
+    <p>
+    <h3>Ingredients</h3>
+
+    <ul>
+        <li>6 cups grated carrots</li>
+        <li>1 cup brown sugar</li>
+        <li>1 cup raisins</li>
+        <li>4 eggs</li>
+        <li>1 1/2 cups granulated sugar</li>
+        <li>1 cup vegetable oil</li>
+        <li>2 teaspoons vanilla extract</li>
+        <li>1 cup crushed pineapple, drained</li>
+        <li>3 cups all-purpose flour</li>
+        <li>1 1/2 teaspoons baking soda</li>
+        <li>1 teaspoon salt</li>
+        <li>4 teaspoons ground cinnamon</li>
+        <li>1 cup chopped walnuts</li>
+    </ul>
+
+    <p>
+    <h3>Steps:</h3>
+    </p>
+
+    <p>
+    <ol>
+        <li>In a medium bowl, combine grated carrots and brown sugar. Set aside for 60 minutes, then stir in the
+            raisins.
+        </li>
+        <li>Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 10-inch cake pans.
+        </li>
+        <li>In a large bowl, beat the eggs until light. Gradually add the white sugar, oil, and vanilla, and stir in the
+            pineapple. In a separate bowl, combine the flour, baking soda, salt, and cinnamon. Then, gradually stir the
+            dry
+            mixture into the wet mixture until fully combined. Finally, fold in the carrot mixture and the chopped
+            walnuts.
+            Pour the batter evenly into the prepared pans.
+        </li>
+        <li>Bake for 45 to 50 minutes in the preheated oven or until a toothpick inserted into the center comes out
+            clean.
+            Allow the cakes to cool for 10 minutes before removing them from the pans. Once the cakes are completely
+            cooled,
+            frost with cream cheese frosting.
+        </li>
+    </ol>
+    </p>
+</div>
+{% endblock %}

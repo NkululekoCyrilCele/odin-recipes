@@ -1,17 +1,83 @@
 body {
-    background-color: chocolate;
-    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
-}
-
-#header {
+/* Center the content */
+.center {
     text-align: center;
-}
-
-/*.image {
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  /* Style for the image */
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+  
+  /* Style for the header */
+  #header {
+    font-size: 2.5rem;
     text-align: center;
-}*/
+  }
+  
+  /* Style for the title */
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Style for the list of ingredients and steps */
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul {
+    margin: 10px 0 30px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+    display: block;
+    margin-bottom: .5em;
+  }
 
-/*.center {
-    text-align: center;
-}*/
+  ol li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    font-weight: bold;
+    margin-right: .5em;
+  }
+
+  p, ol {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+
+  ol {
+    counter-reset: item;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Style for the links */
+  a {
+    color: #008080;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

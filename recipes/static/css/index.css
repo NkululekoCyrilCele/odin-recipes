@@ -1,42 +1,12 @@
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 40px 0;
-    padding: 0;
-  }
-  
-  li {
-    margin: 10px 0;
-  }
-  
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  p {
-    margin-top: 40px;
-    text-align: center;
-  }
+#header {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}

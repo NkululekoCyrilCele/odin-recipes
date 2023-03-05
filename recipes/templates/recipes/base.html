@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
     <head>
         <title>The Odin Project</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     </head>
 
     <body>
@@ -12,9 +13,9 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About</a></li>
-                <li><a href="/recipes/apple_cake/">Apple Cake</a></li>
-                <li><a href="/recipes/carrot_cake/">Carrot Cake</a></li>
-                <li><a href="/recipes/pumpkin_cake/">Pumpkin Cake</a></li>
+                <li><a href="{% url 'apple_cake_recipe' %}">Apple Cake</a></li>
+                <li><a href="{% url 'carrot_cake_recipe' %}">Carrot Cake</a></li>
+                <li><a href="{% url 'pumpkin_cake_recipe' %}">Pumpkin Cake</a></li>
             </ul>
         </nav>
 
@@ -22,6 +23,23 @@
         {% endblock %}
 
         <a href="#header">Return to top</a>
+        <script>
+            // Get the "Return to top" link
+            const returnToTopLink = document.querySelector('a[href="#header"]');
+
+            // Add a click event listener to the link
+            returnToTopLink.addEventListener('click', () => {
+                // Scroll to the top of the page
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
     </body>
+    <footer>
+        <p>© 2023 The Odin Project</p>
+    </footer>
 
 </html>
