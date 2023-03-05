@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 768px) {
   a[href="#header"] {
-    display: none;
+    display: block;
     background-color: #333;
     color: white;
     border-radius: 4px;
@@ -71,11 +71,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+  a[href="#header"] {
+    display: none;
+  }
 }

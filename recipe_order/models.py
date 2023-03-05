@@ -8,3 +8,9 @@ class RecipeOrder(models.Model):
     frosting_type = models.CharField(max_length=50)
     delivery_date = models.DateField()
     quantity = models.IntegerField()
+
+    class Meta:
+        ordering = ('recipe_type',)
+
+    def __str__(self):
+        return self.recipe_type
