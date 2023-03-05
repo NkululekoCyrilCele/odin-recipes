@@ -8,6 +8,12 @@ django = "*"
 mysqlclient = "*"
 pylint-django = "*"
 pillow = "*"
+djangorestframework = "*"
+django-debug-toolbar = "*"
+djangorestframework-xml = "*"
+djangorestframework-csv = "*"
+djangorestframework-yaml = "*"
+bleach = "*"
 
 [dev-packages]
 autopep8 = "*"
