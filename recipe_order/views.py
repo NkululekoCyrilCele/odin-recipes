@@ -1,9 +1,7 @@
-from django.contrib.auth import logout
-from django.contrib.auth import authenticate, login
-from .forms import LoginForm, RegistrationForm
+from django.contrib.auth import authenticate, login, logout
+from .forms import LoginForm, RegistrationForm, RecipeOrderForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from .forms import RecipeOrderForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -12,7 +10,11 @@ def recipe_order(request):
     if request.method == 'POST':
         form = RecipeOrderForm(request.POST)
         if form.is_valid():
-            form.save()
+            order = form.save()
+            cart, created = Cart.objects.get_or_create(user=request.user)
+            cart.items.add(order)
+            messages.success(
+                request, 'Your order has been added to your cart.')
             return render(request, 'recipe_order/thankyou.html')
     else:
         form = RecipeOrderForm()
