@@ -10,11 +10,9 @@ def recipe_order(request):
     if request.method == 'POST':
         form = RecipeOrderForm(request.POST)
         if form.is_valid():
-            order = form.save()
-            cart, created = Cart.objects.get_or_create(user=request.user)
-            cart.items.add(order)
+            form.save()
             messages.success(
-                request, 'Your order has been added to your cart.')
+                request, 'Your order has been placed successfully.')
             return render(request, 'recipe_order/thankyou.html')
     else:
         form = RecipeOrderForm()
@@ -32,7 +30,7 @@ def login_view(request):
                 login(request, user)
                 return redirect('recipe_order')
             else:
-                messages.error(request, 'Invalid username or password.')
+                form.add_error(None, 'Invalid username or password.')
     else:
         form = LoginForm()
     return render(request, 'registration/login.html', {'form': form})
